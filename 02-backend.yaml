@@ -49,7 +49,7 @@
   - name: copy backend.service file
     ansible.builtin.copy:
       src: backend.service  # source file in ansible server (control node)
-      dest: /etc/systemd/system  # destination in ansible remote server (managed node)
+      dest: /etc/systemd/system/backend.service  # destination in ansible remote server (managed node)
       
   - name: install PyMySQL and cryptograpgy to connect to DB
     ansible.builtin.pip:
